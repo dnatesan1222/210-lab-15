@@ -34,38 +34,53 @@ public:
     }
 };
 
+
+// main() reads in a file and stores the info into movie objects
+// arguments: input.txt must exist in the directory
+// returns: 0 when complete
 int main(){
 
-    Movie kk;
+    //first test - checks getters, setters, and print() for movie objects
+    /* Movie kk;
     kk.setWriter("Robert Mark Kamen");
     kk.setYear(1984);
     kk.setTitle("The Karate Kid");
     kk.print();
+    
+    cout << "\nTitle: " << kk.getRed() << endl;
+    cout << "Year: " << kk.getBlue() << endl;
+    cout << "Screenwriter: " << kk.getWriter() << endl;
 
-    array<Movie,4> mov;
+    vector<Movie> mov;		//create a vector of movies as a container
 
     ifstream fin("input.txt");
     int count = 0;
     if ( fin.good( )){
-        string line;
+        string line;		//holder for the line that is being read
 
         while (getline(fin, line)){ //get the movie title
-            Movie m;            
+            Movie m;		//create temporary movie object
             m.setTitle(line);
+
+            //assign year
             int y;
             fin >> y;
             m.setYear(y);
             fin.ignore();	//gets the readline to the next line after the year
+            
+            //assign screenwriter
             getline(fin, line);
             m.setWriter(line);
-            mov[count] = m;
-            count += 1;
+            
+            mov.push_back(m);	//append the movie object to the container
 
         }
     }
+    //print out the values stored in the saved container
     mov[0].print();
     mov[1].print();
     mov[2].print();
     mov[3].print();
 
+    return 0;
 }

@@ -46,18 +46,24 @@ int main(){
     int count = 0;
     if ( fin.good( )){
         string line;
+        array<Movie,4> m;
 
-        while (getline(fin, line)){
-            Movie m;
-            m.setTitle(line);
+        while (getline(fin, line)){ //get the movie title
+            
+            m[count].setTitle(line);
             int y;
             fin >> y;
-            m.setYear(y);
-            fin.ignore();
+            m[count].setYear(y);
+            fin.ignore();	//gets the readline to the next line after the year
             getline(fin, line);
-            m.setWriter(line);
+            m[count].setWriter(line);
             count += 1;
-            m.print();
+
         }
     }
+    m[0].print();
+    m[1].print();
+    m[2].print();
+    m[3].print();
+
 }

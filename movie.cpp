@@ -42,28 +42,30 @@ int main(){
     kk.setTitle("The Karate Kid");
     kk.print();
 
+    array<Movie,4> mov;
+
     ifstream fin("input.txt");
     int count = 0;
     if ( fin.good( )){
         string line;
-        array<Movie,4> m;
 
         while (getline(fin, line)){ //get the movie title
-            
-            m[count].setTitle(line);
+            Movie m;            
+            m.setTitle(line);
             int y;
             fin >> y;
-            m[count].setYear(y);
+            m.setYear(y);
             fin.ignore();	//gets the readline to the next line after the year
             getline(fin, line);
-            m[count].setWriter(line);
+            m.setWriter(line);
+            mov[count] = m;
             count += 1;
 
         }
     }
-    m[0].print();
-    m[1].print();
-    m[2].print();
-    m[3].print();
+    mov[0].print();
+    mov[1].print();
+    mov[2].print();
+    mov[3].print();
 
 }

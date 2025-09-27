@@ -42,5 +42,13 @@ int main(){
     kk.setTitle("The Karate Kid");
     kk.print();
 
-
+    ifstream fin("input.txt");
+    
+    while ( fin.good( )){
+        Movie 
+        string line;
+        getline(fin, line)
+        
+        
+    }
 }

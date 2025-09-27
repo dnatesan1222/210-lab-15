@@ -45,17 +45,19 @@ int main(){
     ifstream fin("input.txt");
     int count = 0;
     if ( fin.good( )){
-        getline(fin, line)
+        string line;
 
         while (getline(fin, line)){
-            Movie (count);
-            (count).setTitle(line);
+            Movie m;
+            m.setTitle(line);
             int y;
             fin >> y;
-            (count).setYear(y);
-            getline(fin, line)
-            (count).setWriter(line);
+            m.setYear(y);
+            fin.ignore();
+            getline(fin, line);
+            m.setWriter(line);
             count += 1;
-
+            m.print();
+        }
     }
 }

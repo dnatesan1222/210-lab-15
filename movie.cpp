@@ -43,12 +43,19 @@ int main(){
     kk.print();
 
     ifstream fin("input.txt");
-    
-    while ( fin.good( )){
-        Movie 
-        string line;
+    int count = 0;
+    if ( fin.good( )){
         getline(fin, line)
-        
-        
+
+        while (getline(fin, line)){
+            Movie (count);
+            (count).setTitle(line);
+            int y;
+            fin >> y;
+            (count).setYear(y);
+            getline(fin, line)
+            (count).setWriter(line);
+            count += 1;
+
     }
 }

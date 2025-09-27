@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <fstream>
 using namespace std;
 
 
@@ -16,15 +17,21 @@ private:
 
 public:
     // getters: no arguments, returns the stored values of the instance variables
-    int getWriter()		{ return writer; }
+    string getWriter()		{ return writer; }
     int getYear()		{ return year; }
-    int getTitle()		{ return title; }
+    string getTitle()		{ return title; }
 
     // setters: take ints as arguments and sets instance variables
     void setWriter(string w)	{ writer = w; }
     void setYear(int y)		{ year = y; }
     void setTitle(string t)	{ title = t; }
 
+    // other methods:
+    void print(){
+        cout << '\n' << setw(15) << "Movie: " << title << endl;
+        cout << setw(15) << "Year: " << year << endl;
+	cout << setw(15) << "Screenwriter: " << writer << '\n' << endl;
+    }
 };
 
 int main(){
@@ -33,7 +40,7 @@ int main(){
     kk.setWriter("Robert Mark Kamen");
     kk.setYear(1984);
     kk.setTitle("The Karate Kid");
-
+    kk.print();
 
 
 }

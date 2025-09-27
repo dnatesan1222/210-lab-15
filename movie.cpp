@@ -41,15 +41,15 @@ public:
 int main(){
 
     //first test - checks getters, setters, and print() for movie objects
-    /* Movie kk;
+    /*Movie kk;
     kk.setWriter("Robert Mark Kamen");
     kk.setYear(1984);
     kk.setTitle("The Karate Kid");
     kk.print();
     
-    cout << "\nTitle: " << kk.getRed() << endl;
-    cout << "Year: " << kk.getBlue() << endl;
-    cout << "Screenwriter: " << kk.getWriter() << endl;
+    cout << "\nTitle: " << kk.getTitle() << endl;
+    cout << "Year: " << kk.getYear() << endl;
+    cout << "Screenwriter: " << kk.getWriter() << endl;*/
 
     vector<Movie> mov;		//create a vector of movies as a container
 
